@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>com.lapsa.maven.pom</groupId>
 		<artifactId>javaee7-app-parent</artifactId>
-		<version>1.3.1</version>
+		<version>1.3.4</version>
 	</parent>
 
 	<groupId>com.lapsa.font-awesome-lib</groupId>
 	<artifactId>font-awesome</artifactId>
-	<version>UNKNOWN-SNAPSHOT</version>
+	<version>4.6.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Lib</name>
@@ -21,7 +21,7 @@
 		<download-dir>${project.build.directory}/download/</download-dir>
 		<unzip-dir>${project.build.directory}/unzip/</unzip-dir>
 		<build-output>${project.build.outputDirectory}/META-INF/resources/</build-output>
-		<module-name>font-awesome-4.6.1</module-name>
+		<module-name>font-awesome-4.6.3</module-name>
 		<zip-name>${module-name}.zip</zip-name>
 	</properties>
 
