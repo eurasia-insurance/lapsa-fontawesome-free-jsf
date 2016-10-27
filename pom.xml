@@ -9,7 +9,7 @@
 
 	<groupId>com.lapsa.font-awesome-lib</groupId>
 	<artifactId>font-awesome</artifactId>
-	<version>4.7.1-SNAPSHOT</version>
+	<version>unknown-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Lib</name>
