@@ -9,7 +9,7 @@
 
 	<groupId>com.lapsa.font-awesome-lib</groupId>
 	<artifactId>font-awesome</artifactId>
-	<version>4.7.0-SNAPSHOT</version>
+	<version>4.7.0</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Lib</name>
@@ -158,7 +158,7 @@
 	<scm>
 		<connection>scm:git:https://gitrepo.theeurasia.kz/lapsa/font-awesome-lib.git</connection>
 		<developerConnection>scm:git:https://gitrepo.theeurasia.kz/lapsa/font-awesome-lib.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v4.7.0</tag>
 	</scm>
 
 	<issueManagement>
