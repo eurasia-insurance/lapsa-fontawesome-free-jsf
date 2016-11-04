@@ -156,14 +156,14 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:https://gitrepo.theeurasia.kz/lapsa/font-awesome-lib.git</connection>
-		<developerConnection>scm:git:https://gitrepo.theeurasia.kz/lapsa/font-awesome-lib.git</developerConnection>
+		<connection>scm:git:http://gitlab.lapsa.tech/lapsa/font-awesome-lib.git</connection>
+		<developerConnection>scm:git:http://gitlab.lapsa.tech/lapsa/font-awesome-lib.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
 		<system>gitlab</system>
-		<url>https://gitrepo.theeurasia.kz/lapsa/font-awesome-lib/issues</url>
+		<url>http://gitlab.lapsa.tech/lapsa/font-awesome-lib/issues</url>
 	</issueManagement>
 
 </project>
