@@ -2,168 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.lapsa.maven.pom</groupId>
-		<artifactId>javaee7-app-parent</artifactId>
-		<version>2.0</version>
+		<groupId>tech.lapsa.maven</groupId>
+		<artifactId>maven-general</artifactId>
+		<version>3.1</version>
 	</parent>
 
-	<groupId>com.lapsa.font-awesome-lib</groupId>
-	<artifactId>font-awesome</artifactId>
-	<version>unknown-SNAPSHOT</version>
+	<groupId>tech.lapsa.lapsa</groupId>
+	<artifactId>fontawesome-free-jsf</artifactId>
+	<version>5.0.6-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Lib</name>
 
-
-
-	<properties>
-		<resource-name>font-awesome</resource-name>
-		<download-dir>${project.build.directory}/download/</download-dir>
-		<unzip-dir>${project.build.directory}/unzip/</unzip-dir>
-		<build-output>${project.build.outputDirectory}/META-INF/resources/</build-output>
-		<module-name>font-awesome-4.7.0</module-name>
-		<zip-name>${module-name}.zip</zip-name>
-	</properties>
-
-
-	<build>
-		<plugins>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>wagon-maven-plugin</artifactId>
-				<version>1.0</version>
-				<executions>
-					<execution>
-						<id>download-from-site</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>download-single</goal>
-						</goals>
-						<configuration>
-							<url>http://fontawesome.io/assets/</url>
-							<fromFile>${zip-name}</fromFile>
-							<toDir>${download-dir}</toDir>
-						</configuration>
-
-					</execution>
-				</executions>
-			</plugin>
-
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.6</version>
-				<executions>
-					<execution>
-						<id>unpack-zip</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<target>
-								<unzip src="${download-dir}/${zip-name}" dest="${unzip-dir}" />
-							</target>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-
-			<!-- transform CSS -->
-			<plugin>
-				<groupId>com.google.code.maven-replacer-plugin</groupId>
-				<artifactId>replacer</artifactId>
-				<version>1.5.3</version>
-				<executions>
-					<execution>
-						<id>transform-css</id>
-						<!-- <phase>prepare-package</phase> -->
-						<!-- <phase>process-resources</phase> -->
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>replace</goal>
-						</goals>
-						<configuration>
-							<filesToInclude>${unzip-dir}/${module-name}/**/*.css</filesToInclude>
-							<file />
-							<regex>true</regex>
-							<replacements>
-								<replacement>
-									<token>url\(\'\.\.\/fonts\/(.*?\.(?:(?:eot)|(?:woff)|(?:woff2)|(?:svg)|(?:ttf)))\?(.*?)\'\)</token>
-									<value>url("#{resource['${resource-name}/fonts/$1']}?$2")</value>
-								</replacement>
-							</replacements>
-							<regexFlags>
-								<regexFlag>MULTILINE</regexFlag>
-								<regexFlag>DOTALL</regexFlag>
-							</regexFlags>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<!-- copy fonts images -->
-					<execution>
-						<id>copy-fonts</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${build-output}/${resource-name}/fonts</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${unzip-dir}/${module-name}/fonts</directory>
-									<includes>
-										<include>*.otf</include>
-										<include>*.eot</include>
-										<include>*.woff</include>
-										<include>*.woff2</include>
-										<include>*.svg</include>
-										<include>*.ttf</include>
-									</includes>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-					<!-- copy css -->
-					<execution>
-						<id>copy-css</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${build-output}/${resource-name}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${unzip-dir}/${module-name}/css</directory>
-									<includes>
-										<include>*.*</include>
-									</includes>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-
 	<scm>
-		<connection>scm:git:http://gitlab.lapsa.tech/lapsa/font-awesome-lib.git</connection>
-		<developerConnection>scm:git:http://gitlab.lapsa.tech/lapsa/font-awesome-lib.git</developerConnection>
+		<connection>scm:git:http://gitlab.lapsa.tech/lapsa/lapsa/fontawesome-free-jsf.git</connection>
+		<developerConnection>scm:git:http://gitlab.lapsa.tech/lapsa/lapsa/fontawesome-free-jsf.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
 		<system>gitlab</system>
-		<url>http://gitlab.lapsa.tech/lapsa/font-awesome-lib/issues</url>
+		<url>http://gitlab.lapsa.tech/lapsa/lapsa/fontawesome-free-jsf/issues</url>
 	</issueManagement>
 
 </project>
