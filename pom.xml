@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.lapsa</groupId>
 	<artifactId>fontawesome-free-jsf</artifactId>
-	<version>5.0.6-SNAPSHOT</version>
+	<version>5.0.6</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Free : JSF Resources</name>
@@ -17,7 +17,7 @@
 	<scm>
 		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/fontawesome-free-jsf.git</connection>
 		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/lapsa/fontawesome-free-jsf.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v5.0.6</tag>
 	</scm>
 
 	<issueManagement>
