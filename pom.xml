@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.lapsa</groupId>
 	<artifactId>fontawesome-free-jsf</artifactId>
-	<version>5.0.8-SNAPSHOT</version>
+	<version>5.0.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Font Awesome Lib</name>
