@@ -1,4 +1,4 @@
-#!/bin/perl
+#!/usr/bin/perl
 
 while (<STDIN>) {
 #	print "ORIGIN $_";
